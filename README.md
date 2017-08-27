@@ -1,1 +1,1 @@
-# SQL-and-relaltional-databases
+# SQL-and-relational-databases
