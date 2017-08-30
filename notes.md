@@ -43,6 +43,14 @@ Can take multiple joins to retrieve, which makes it inefficient
 
 May be designed expecting a pattern but that pattern only has a few occurencies (may be denormalized)
 
-# data formats
+#Data formats
+
+INTERVAL
+
+#Indexes
+
+Best used in tables where reads are more common
+
+#pg_dump and pg_restore
 
 
