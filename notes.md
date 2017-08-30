@@ -29,4 +29,20 @@ SUM() returns the sum of all values in a column
 
 ##mathematical
 
+#data analysis with GROUP BY
+
+#Normal form
+
+PROS:
+
+Allows more complex realtionships (many to many)
+
+CONS:
+
+Can take multiple joins to retrieve, which makes it inefficient
+
+May be designed expecting a pattern but that pattern only has a few occurencies (may be denormalized)
+
+# data formats
+
 
