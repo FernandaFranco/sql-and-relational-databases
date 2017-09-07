@@ -53,4 +53,12 @@ Best used in tables where reads are more common
 
 #pg_dump and pg_restore
 
+# WHAT KIND OF PROGRAMMING LANGUAGE IS SQL?
+
+a special purpose language since it's basically only used to interact with relational databases.
+
+# DDL, DML, DCL
+
+#
+
 
