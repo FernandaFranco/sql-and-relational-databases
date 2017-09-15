@@ -1,8 +1,8 @@
-#operators
+# operators
 
 evaluates conditions in sql queries.
 
-##comparison
+## comparison
 
 =
 <
@@ -10,28 +10,28 @@ evaluates conditions in sql queries.
 <=
 >=
 
-##logical
+## logical
 
 almost exclusively used in the WHERE clause of queries.
 
-##LIKE
+## LIKE
 
-#functions
+# functions
 
-##string
+## string
 TRIM, LTRIM, RTRIM
 
-##aggregate
+## aggregate
 
 SUM() returns the sum of all values in a column
 
-##date/time
+## date/time
 
-##mathematical
+## mathematical
 
-#data analysis with GROUP BY
+# data analysis with GROUP BY
 
-#Normal form
+# Normal form
 
 PROS:
 
@@ -43,15 +43,15 @@ Can take multiple joins to retrieve, which makes it inefficient
 
 May be designed expecting a pattern but that pattern only has a few occurencies (may be denormalized)
 
-#Data formats
+# Data formats
 
 INTERVAL
 
-#Indexes
+# Indexes
 
 Best used in tables where reads are more common
 
-#pg_dump and pg_restore
+# pg_dump and pg_restore
 
 # WHAT KIND OF PROGRAMMING LANGUAGE IS SQL?
 
