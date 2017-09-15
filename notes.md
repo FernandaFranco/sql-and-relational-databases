@@ -59,6 +59,44 @@ a special purpose language since it's basically only used to interact with relat
 
 # DDL, DML, DCL
 
-#
+# Keys
+
+Natural keys (name, phone number, ssn) vs Surrogate key (id)
+
+PRIMARY KEYS vs NOT NULL UNIQUE
+
+# ORDER BY
+
+ASC ascending vs DESC descending order
+
+# How PostgreSQL executes queries
+
+query and database optimization
+
+SELECT queries can be very complex
+
+#DML
+Manipulation: CREATE, READ, UPDATE, DELETE THE ACTUAL DATA.
+
+SELECT
+INSERT
+UPDATE
+DELETE
+
+#DDL
+Definition: Create, modify and delete databases and tables. Describing how data is structured.
+
+CREATE TABLE
+ALTER
+DROP
+
+SELECT column_name FROM my_table;
+
+The above is a DML statement, since it manipulates the data and not the structure of the table/database.
+
+
+
+
+
 
 
