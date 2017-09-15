@@ -90,9 +90,58 @@ CREATE TABLE
 ALTER
 DROP
 
+---
 SELECT column_name FROM my_table;
 
 The above is a DML statement, since it manipulates the data and not the structure of the table/database.
+
+---
+CREATE TABLE things (
+  id serial PRIMARY KEY,
+  item text NOT NULL UNIQUE,
+  material text NOT NULL
+);
+
+On the other hand, the above statement is a DDL component, because it defines the type of information stored in a db table.
+
+---
+ALTER TABLE things
+DROP CONSTRAINT thing_item_key;
+
+This is a DDL statement.
+
+---
+INSERT INTO things VALUES (3, 'Scissors', 'Metal');
+
+This is a DML component since it adds more data to the table.
+
+---
+UPDATE things
+SET material = 'plastic'
+WHERE item = 'Cup';
+
+UPDATE is DML since it changes the data;
+
+---
+\d
+
+\d is a psql console (meta) command, but it does act like a DDL statement since it displays the schema of the db/table;
+
+---
+DELETE FROM things WHERE item = 'Cup';
+
+DML
+
+---
+DROP DATABASE xyzzy;
+
+DDL and DML because it deletes the whole structure, including all the data.
+
+---
+CREATE SEQUENCE part_number_sequence;
+
+
+
 
 
 
