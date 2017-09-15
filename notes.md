@@ -140,6 +140,15 @@ DDL and DML because it deletes the whole structure, including all the data.
 ---
 CREATE SEQUENCE part_number_sequence;
 
+DDL. It adds a sequence object to the db structure. It manipulates the data definitions, creating a new sequence number generator which will dictate how the data (next value) will be generated.. All CREATE statements are thought of as DDL.
+
+# Relational databases
+
+Relational db persist data in a set of relations. A relation is pretty much another way of saying "table". Sequences and views can also be relations. Anything you can use in a FROM clause, basically.
+
+A relaionship is a connection between rows of data in different tables (relations).
+
+
 
 
 
