@@ -146,7 +146,21 @@ DDL. It adds a sequence object to the db structure. It manipulates the data defi
 
 Relational db persist data in a set of relations. A relation is pretty much another way of saying "table". Sequences and views can also be relations. Anything you can use in a FROM clause, basically.
 
-A relaionship is a connection between rows of data in different tables (relations).
+A relationship is a connection between rows of data in different tables (relations).
+
+# database diagrams
+
+conceptual schema: focus on identifying entities and their relationships.
+
+physical schema: focus on implementation, database specific
+
+# foreign key
+
+referential integrity: the db ensures that every value on a foreign key column exists in the primary key column of the referenced table.
+
+It doesn't prevent null values to be stored in the foreign key column. in order to do that we also need to add the not null constraint to the column.
+
+
 
 
 
