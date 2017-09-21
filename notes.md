@@ -160,7 +160,18 @@ referential integrity: the db ensures that every value on a foreign key column e
 
 It doesn't prevent null values to be stored in the foreign key column. in order to do that we also need to add the not null constraint to the column.
 
+# one to many relationships
 
+### normalization: I should think about it if my db is susceptible to:
+update anomaly
+insertion anomaly
+deletion anomaly
+
+# DDL statements
+
+Essential for setting up and maintaining the structure of a database
+
+a statements has clauses. for example, ADD COLUMN is a clause of the ALTER TABLE statement.
 
 
 
