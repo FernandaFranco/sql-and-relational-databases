@@ -148,11 +148,19 @@ Relational db persist data in a set of relations. A relation is pretty much anot
 
 A relationship is a connection between rows of data in different tables (relations).
 
+There are 3 types of relationships: one-to-one, one-to-many, many-to-many;
+
 # database diagrams
 
 conceptual schema: focus on identifying entities and their relationships.
 
 physical schema: focus on implementation, database specific
+
+cardinality: number of objects on each side of the relationship
+
+modality: relationship required or not
+
+Referential integrity is a data property that requires every value in one column of a table to appear in a column of (usually) another table.
 
 # foreign key
 
@@ -171,8 +179,23 @@ deletion anomaly
 
 Essential for setting up and maintaining the structure of a database
 
-a statements has clauses. for example, ADD COLUMN is a clause of the ALTER TABLE statement.
+A statement has clauses. for example, ADD COLUMN is a clause of the ALTER TABLE statement.
 
+# DML statements
+
+Access and manipulate data
+
+# MANY TO MANY relationship
+
+Usually means adding an extra table to the db (called join table)
+
+# DISTINCT
+
+Filters by distinct rows, not field.
+
+# HAVING
+
+Like a condition clause WHERE, but for GROUP BY. Required when selecting rows based on aggregated data such as a count, because aggregate functions are not allowed in WHERE.
 
 
 
