@@ -197,6 +197,14 @@ Filters by distinct rows, not field.
 
 Like a condition clause WHERE, but for GROUP BY. Required when selecting rows based on aggregated data such as a count, because aggregate functions are not allowed in WHERE.
 
+# Interaction Ruby - POSGRESQL
+
+- Gem pg
+- Object PG::Connection
+- #exec and #exec_params
+- Object PG::Result
+
+
 
 
 
