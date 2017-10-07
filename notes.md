@@ -204,7 +204,9 @@ Like a condition clause WHERE, but for GROUP BY. Required when selecting rows ba
 - #exec and #exec_params
 - Object PG::Result
 
+# ANY VS ALL
 
+if nothing returns from a query with any, that yields a false value, and the row isn't chosen. on the other hand, when using all, if nothing is returned from a q uery that yields a true value, and the row is selected.
 
 
 
