@@ -43,7 +43,8 @@ INSERT INTO contacts (name, phone, email) VALUES ('Fernanda', '1231231234', 'fer
 ```
 
 ```PLpgSQL
-INSERT INTO contacts (name, phone, email) VALUES ('Eddie', '6171231234', 'eddie@mail.com');```
+INSERT INTO contacts (name, phone, email) VALUES ('Eddie', '6171231234', 'eddie@mail.com');
+```
 
 ```PLpgSQL
 INSERT INTO contacts (name, email) VALUES ('Seraphine', 'seraphine@mail.com');
