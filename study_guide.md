@@ -34,7 +34,9 @@ Controls rights and access roles of users. GRANT
 
 ## Write SQL statements using INSERT, UPDATE, DELETE, CREATE/ALTER/DROP TABLE, ADD/ALTER/DROP COLUMN.
 
-```PLpgSQL CREATE TABLE contacts (id serial PRIMARY KEY, name text NOT NULL, phone varchar(10), email text);```
+```PLpgSQL
+CREATE TABLE contacts (id serial PRIMARY KEY, name text NOT NULL, phone varchar(10), email text);
+```
 
 ```INSERT INTO contacts (name, phone, email) VALUES ('Fernanda', '1231231234', 'fernanda@mail.com');```
 
