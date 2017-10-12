@@ -35,7 +35,9 @@ Controls rights and access roles of users. GRANT
 ## Write SQL statements using INSERT, UPDATE, DELETE, CREATE/ALTER/DROP TABLE, ADD/ALTER/DROP COLUMN.
 
 CREATE TABLE contacts (id serial PRIMARY KEY, name text NOT NULL, phone integer, email text);
+
 ---
+
 INSERT INTO contacts (name, phone, email) VALUES ('Fernanda', 1231231234, 'fernanda@mail.com');
 
 ## Understand how to use GROUP BY, ORDER BY, WHERE, and HAVING.
