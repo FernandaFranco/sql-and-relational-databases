@@ -38,15 +38,23 @@ Controls rights and access roles of users. GRANT
 CREATE TABLE contacts (id serial PRIMARY KEY, name text NOT NULL, phone varchar(10), email text);
 ```
 
-```INSERT INTO contacts (name, phone, email) VALUES ('Fernanda', '1231231234', 'fernanda@mail.com');```
+```PLpgSQL
+INSERT INTO contacts (name, phone, email) VALUES ('Fernanda', '1231231234', 'fernanda@mail.com');```
 
-```INSERT INTO contacts (name, phone, email) VALUES ('Eddie', '6171231234', 'eddie@mail.com');```
+```PLpgSQL
+INSERT INTO contacts (name, phone, email) VALUES ('Eddie', '6171231234', 'eddie@mail.com');```
 
-```INSERT INTO contacts (name, email) VALUES ('Seraphine', 'seraphine@mail.com');```
+```PLpgSQL
+INSERT INTO contacts (name, email) VALUES ('Seraphine', 'seraphine@mail.com');
+```
 
-```UPDATE contacts SET email = 'fernanda@snail.com' WHERE name = 'Fernanda';```
+```PLpgSQL
+UPDATE contacts SET email = 'fernanda@snail.com' WHERE name = 'Fernanda';
+```
 
-```DELETE FROM ```
+```PLpgSQL
+DELETE FROM
+```
 
 ## Understand how to use GROUP BY, ORDER BY, WHERE, and HAVING.
 
