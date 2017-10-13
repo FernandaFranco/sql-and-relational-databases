@@ -35,30 +35,55 @@ Controls rights and access roles of users. GRANT
 ## Write SQL statements using INSERT, UPDATE, DELETE, CREATE/ALTER/DROP TABLE, ADD/ALTER/DROP COLUMN.
 
 ```PLpgSQL
-CREATE TABLE contacts (id serial PRIMARY KEY, name text NOT NULL, phone varchar(10), email text);
-```
+CREATE TABLE contacts (id serial PRIMARY KEY, name text NOT NULL, phone text, email text);
 
-```PLpgSQL
 INSERT INTO contacts (name, phone, email) VALUES ('Fernanda', '1231231234', 'fernanda@mail.com');
-```
 
-```PLpgSQL
 INSERT INTO contacts (name, phone, email) VALUES ('Eddie', '6171231234', 'eddie@mail.com');
-```
 
-```PLpgSQL
+CREATE TYPE category_type AS ENUM ('family', 'friends', 'work');
+
+ALTER TABLE contacts ADD COLUMN category category_type DEFAULT 'friends';
+
+UPDATE contacts SET category = 'family' WHERE name = 'Fernanda';
+
+UPDATE contacts SET category = 'work' WHERE name = 'Eddie';
+
+ALTER TABLE contacts ALTER COLUMN phone TYPE varchar(20);
+
 INSERT INTO contacts (name, email) VALUES ('Seraphine', 'seraphine@mail.com');
-```
 
-```PLpgSQL
-UPDATE contacts SET email = 'fernanda@snail.com' WHERE name = 'Fernanda';
-```
-
-```PLpgSQL
 DELETE FROM contacts WHERE phone IS NULL;
+
+ALTER TABLE contacts DROP COLUMN category;
+
+DROP TABLE contacts;
 ```
 
-## Understand how to use GROUP BY, ORDER BY, WHERE, and HAVING.
+## Understand how to use `GROUP BY`, `ORDER BY`, `WHERE`, and `HAVING`.
+
+#### GROUP BY
+
+`GROUP BY` is a clause which can be used in the select statement to group rows by a specified field. It requires an aggregation function.
+
+#### ORDER BY
+
+
+#### WHERE
+
+`WHERE` is a clause added to a SQL statement to filter the returned data with a condition. Only the records with the field value equal to the value in our condition will be returned.
+
+```PLpgSQL
+SELECT * FROM contacts WHERE name = 'Fernanda';
+```
+
+#### HAVING
+
+Similarly to the `WHERE` clause, `HAVING` filters
+
+
+
+
 
 # PostgreSQL
 
