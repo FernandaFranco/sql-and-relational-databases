@@ -34,7 +34,7 @@ Controls rights and access roles of users. GRANT
 
 ## Write SQL statements using INSERT, UPDATE, DELETE, CREATE/ALTER/DROP TABLE, ADD/ALTER/DROP COLUMN.
 
-```PLpgSQL
+```SQL
 CREATE TABLE contacts (id serial PRIMARY KEY, name text NOT NULL, phone text, email text);
 
 INSERT INTO contacts (name, phone, email) VALUES ('Fernanda', '1231231234', 'fernanda@mail.com');
@@ -66,7 +66,7 @@ DROP TABLE contacts;
 
 `GROUP BY` is a clause which can be used in the select statement to group rows by a specified field. It requires an aggregation function.  Both GROUP BY and aggregate functions perform grouping.
 
-```PLpgSQL
+```SQL
 SELECT count(id), category FROM contacts GROUP BY category;
 ```
 
@@ -74,7 +74,7 @@ SELECT count(id), category FROM contacts GROUP BY category;
 
 `ORDER BY` sorts the results by a field and order specified in the clause.
 
-```PLpgSQL
+```SQL
 SELECT name, phone FROM contacts ORDER BY name ASC;
 ```
 
@@ -82,7 +82,7 @@ SELECT name, phone FROM contacts ORDER BY name ASC;
 
 `WHERE` is a clause added to a SQL statement to filter the returned data with a condition. Only the records with the field value equal to the value in our condition will be returned.
 
-```PLpgSQL
+```SQL
 SELECT * FROM contacts WHERE name = 'Fernanda';
 ```
 
@@ -90,7 +90,7 @@ SELECT * FROM contacts WHERE name = 'Fernanda';
 
 Similarly to the `WHERE` clause, `HAVING` conditions are used to filter rows, but `HAVING` is applied to the values used to create groups instead of individual rows.
 
-```PLpgSQL
+```SQL
 SELECT count(id), category FROM contacts GROUP BY category HAVING count(id) > 1;
 ```
 
@@ -102,14 +102,14 @@ A sequence is a relation that generates a sequential series of numbers. It will 
 
 ## Create an auto-incrementing column.
 
-```PLpgSQL
+```SQL
 CREATE SEQUENCE sequence;
 
 SELECT nextval('sequence');
 SELECT nextval('sequence');
 ```
 
-```PLpgSQL
+```SQL
 CREATE SEQUENCE even_counter INCREMENT BY 2 MINVALUE 0;
 
 SELECT nextval('even_counter');
@@ -118,7 +118,7 @@ DROP SEQUENCE even_counter;
 ```
 Besides that, using `serial` as the column type is just a short-hand in PostgreSQL for this:
 
- ```PLpgSQL
+ ```SQL
 CREATE SEQUENCE contacts_id_seq;
 CREATE TABLE contacts (
   id integer NOT NULL DEFAULT nextval('contacts_id_seq'),
@@ -127,7 +127,7 @@ CREATE TABLE contacts (
  ```
 ## Define a default value for a column.
 
-```PLpgSQL
+```SQL
 ALTER TABLE contacts ALTER COLUMN category SET DEFAULT 'friends';
 ```
 
@@ -155,7 +155,7 @@ Created solely for the purpose of identifying a row in a table. The most common 
 
 ## Create and remove CHECK constraints from a column.
 
-```PLpgSQL
+```SQL
 ALTER TABLE contacts ADD CHECK (length(name) >= 3 AND position(' ' in name) > 0);
 
 ALTER TABLE contacts DROP CONSTRAINT contacts_name_check;
