@@ -139,11 +139,15 @@ Creates an index on a column that makes sure the column will only hold unique no
 
 #### Foreign Key
 
-Creates an constraint on a column that makes it reference another table's primary key.
+Creates an constraint on a column that makes it reference another table's primary key. It preserves the referential integrity of the data by ensuring that every value in a foreign key column exists in the primary key of the referenced table. If we try to insert rows with a foreign key field that doesn't exist in the referenced column, the attempt will be rejected.
 
 To create a foreign key column, simply create a column of the same type as the primary key column it will point to.
 
-To create a foreign key constraint,
+To create a foreign key constraint, add a `REFERENCES` clause when creating a column. Another option is to add the constraint later, using the following syntax:
+
+```SQL
+ALTER TABLE calls_placed ADD FOREIGN KEY (contact_id) REFERENCES contacts(id);
+```
 
 #### Natural Key
 
@@ -169,6 +173,8 @@ CREATE TABLE calls_placed (
   date timestamp DEFAULT NOW(),
   contact_id integer NOT NULL REFERENCES contacts(id)
 );
+
+ALTER TABLE calls_placed DROP CONSTRAINT calls_placed_contact_id_fkey;
 ```
 
 # Database Diagrams
@@ -189,6 +195,5 @@ Many-to-many M:M
 
 Indicates if the relationship is required (1 or more) or not (0 or more). In crow's foot notation those are represented by a circle (optional) or a perpendicular line (required).
 
-## Be able to draw database diagrams using crow's foot
-notation.
+## Be able to draw database diagrams using crow's foot notation.
 
